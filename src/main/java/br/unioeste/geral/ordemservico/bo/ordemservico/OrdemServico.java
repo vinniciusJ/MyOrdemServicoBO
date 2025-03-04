@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class OrdemServico implements Serializable {
-    private Long numero;
+    private String numero;
     private LocalDate dataEmissao;
     private String descricao;
     private Cliente cliente;
@@ -18,7 +18,7 @@ public class OrdemServico implements Serializable {
 
     public OrdemServico() {}
 
-    public OrdemServico(Long numero, LocalDate dataEmissao, String descricao, Cliente cliente, Funcionario funcionarioResponsavel, List<Servico> servicosRealizados) {
+    public OrdemServico(String numero, LocalDate dataEmissao, String descricao, Cliente cliente, Funcionario funcionarioResponsavel, List<Servico> servicosRealizados) {
         this.numero = numero;
         this.dataEmissao = dataEmissao;
         this.descricao = descricao;
@@ -27,11 +27,11 @@ public class OrdemServico implements Serializable {
         this.servicosRealizados = servicosRealizados;
     }
 
-    public Long getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(Long numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
