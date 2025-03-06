@@ -15,6 +15,7 @@ public class OrdemServico implements Serializable {
     private Cliente cliente;
     private Funcionario funcionarioResponsavel;
     private List<Servico> servicosRealizados;
+    private Double valorTotal;
 
     public OrdemServico() {}
 
@@ -33,6 +34,14 @@ public class OrdemServico implements Serializable {
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+
+    public Double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(Double valorTotal) {
+        this.valorTotal = valorTotal;
     }
 
     public LocalDate getDataEmissao() {
